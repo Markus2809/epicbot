@@ -56,7 +56,7 @@ class Moderation(commands.Cog):
             await member.ban(reason=reason)
             await ctx.send(f'{member.name} was banned ;-;\nReason: {reason}')
         except discord.Forbidden:
-            return await ctx.send('Are you trying to ban someone higher than me? I cant do that ;-;')
+            return await ctx.send('Are you trying to ban someone higher than me? I can't do that ;-;')
 
     # unban banned member
     # Usage: >>unban (member)
@@ -206,7 +206,7 @@ class Moderation(commands.Cog):
         stp2 = ", ".join(roles)
         embed = discord.Embed(color=0xFF00EE, title="Guild Info")
         embed.set_author(name=server.name, icon_url=server.icon_url)
-        embed.set_footer(text="uwu")
+        embed.set_footer(text="Server's info.")
         embed.set_thumbnail(url=server.icon_url)
         embed.add_field(name="Name", value=server.name)
         embed.add_field(name="ID", value=str(server.id))
